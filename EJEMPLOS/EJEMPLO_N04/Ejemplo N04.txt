@@ -1,0 +1,18 @@
+Explicación Ejemplo N04
+
+fopen("Ejemplo N04.txt", "r"): Abre el archivo ejemplo.txt en modo de solo lectura (r). Si el archivo no existe o no se puede abrir, devuelve false.
+
+feof($file): Dentro del bucle while, la función feof() verifica si se ha llegado al final del archivo.
+
+Si no se ha llegado al final del archivo, el bucle continúa.
+Si se ha alcanzado el final del archivo, el bucle se detiene.
+
+fgets($file): Lee una línea del archivo. Esta función es comúnmente utilizada junto con feof() para leer el archivo línea por línea.
+
+fclose($file): Cierra el archivo una vez que se ha terminado de leer. Es importante liberar los recursos después de usar el archivo.
+
+Detalles importantes:
+
+feof() devuelve true solo después de intentar leer más allá del final del archivo. Es decir, al llegar justo al final, todavía devuelve false. Solo en el siguiente intento de lectura cambia a true.
+Por eso se suele usar feof() junto con funciones como fgets() o fread() dentro del bucle de lectura.
+Este enfoque permite leer archivos completos de manera eficiente y evitar errores si se intenta leer más allá del final del archivo.

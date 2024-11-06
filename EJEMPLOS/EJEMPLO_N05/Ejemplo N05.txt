@@ -1,0 +1,13 @@
+Explicación Ejemplo N05
+
+Archivo funciones.php: Contiene la definición de una función llamada leer_imprimir(), que recibe un parámetro $file_name y muestra el contenido del archivo
+
+Archivo index.php:
+
+require("funciones.php"): Incluye el archivo funciones.php en el script. 
+Si funciones.php no existe o no se puede cargar, se lanzará un error fatal y el script se detendrá.
+Después de incluir el archivo, se puede utilizar la función leer_imprimir() como si hubiera sido definida en el mismo archivo.
+Llama a leer_imprimir("Ejemplo N04") y muestra el contenido de los archivos
+¿Cuándo usar require()?
+Se usa cuando el archivo que estás incluyendo es crítico para la ejecución del script. 
+Si ese archivo falta o no puede cargarse, quieres que el script se detenga porque no tiene sentido seguir sin esa dependencia.
